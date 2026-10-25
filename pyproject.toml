@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chrome-on-device-infer"
+version = "0.1.0"
+description = "Load and prompt the on-device LLM that Google Chrome downloads (Gemini Nano / OptGuideOnDeviceModel) from Python, via the DevTools Protocol."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "MahirHamiAbrar" }]
+keywords = ["gemini-nano", "chrome", "on-device", "llm", "cdp", "prompt-api", "devtools"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.scripts]
+chrome-on-device-infer = "chrome_on_device_infer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/MahirHamiAbrar/ChromeOnDeviceInference"
+Source = "https://github.com/MahirHamiAbrar/ChromeOnDeviceInference"
+
+[tool.setuptools.packages.find]
+where = ["src"]
